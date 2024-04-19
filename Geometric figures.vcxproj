@@ -127,7 +127,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp" />
     <ClCompile Include="Shape.cpp" />
     <ClCompile Include="Shape.h" />
     <ClCompile Include="transform.cpp" />

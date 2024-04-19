@@ -21,9 +21,6 @@
     <ClCompile Include="Shape.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="main.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
     <ClCompile Include="transform.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
