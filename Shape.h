@@ -52,6 +52,7 @@ struct angle8 {
 class Shape
 {
 public:
+
 	static const int line = 0;
 	static const int sqr = 1;
 	static const int cube = 2;
@@ -59,9 +60,17 @@ public:
 	static const int cylinder = 4;
 
 	Shape() = default;
-	Shape(int type, angle1 ang1, angle2 ang2, angle3 ang3, angle4 ang4, angle5 ang5, angle6 ang6, angle7 ang7, angle8 ang8);
-	Shape(int type, angle1 ang1, double R, double H);
+	
 	int getType() { return type; }
+
+
+
+	Shape shift(Shape& sh,int m, int n, int k);
+	Shape scaleX(Shape& sh, int a);
+	Shape scaleY(Shape& sh, int d);
+	Shape scaleZ(Shape& sh, int e);
+	Shape scale(Shape& sh, int s);
+
 
 	int type;
 	int x1 = 0, y1 = 0, z1 = 0,
@@ -78,3 +87,39 @@ public:
 	double radius = 0;
 };
 
+
+
+
+class Line : public Shape {
+public:
+
+	Line(int _type, angle1 ang1, angle2 ang2);
+
+};
+
+class Rectangle : public Shape {
+public:
+	Rectangle(int _type, angle1 ang1, angle2 ang2, angle3 ang3, angle4 ang4);
+
+};
+
+class Cube : public Shape {
+
+
+public:
+	Cube(int type, angle1 ang1, angle2 ang2, angle3 ang3, angle4 ang4, angle5 ang5, angle6 ang6, angle7 ang7, angle8 ang8);
+
+};
+
+class Circle : public Shape {
+public:
+	Circle(int type, angle1 ang1, double R, double H);
+
+};
+
+class Cylinder : public Shape {
+
+public:
+	Cylinder(int type, angle1 ang1, double R, double H);
+
+};
